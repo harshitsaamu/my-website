@@ -49,7 +49,7 @@ class App extends Component {
                         'intro': 'my introduction',
                         'github': 'my github account',
                         'resume': 'download my resume',
-                        'linkedin': 'lets\'s have a professionally talk',
+                        'linkedin': 'lets\'s have a professional talk',
                         'projects': 'Some of my awesome projects :)'
                     }}
                     msg='Hey human Harshit here, how can I help you'
