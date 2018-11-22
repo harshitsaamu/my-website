@@ -16,3 +16,8 @@ code {
 .App{
   margin: 10px;
 }
+
+.mainElement{
+  align-content: center;
+  align-items: center;
+}

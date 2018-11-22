@@ -1,26 +1,45 @@
 import React, {Component} from 'react';
-import Titles from "./components/Titles";
-import Forms from "./components/Forms";
-import Weather from "./components/Weather";
 import './App.css';
-
-const API_KEY = "AIzaSyBRxeLwZbCtK7OX45szIqaV_JY_pErMdrQ";
+import Terminal from 'terminal-in-react';
 
 class App extends Component {
-    getLocation = async(e) => {
-        e.preventDefault();
-        let pinCode = document.getElementById("pincode");
-        const apiCall = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${pinCode}&key=${API_KEY}`);
-        const data = await apiCall.json();
-        console.log(data);
+    locationData = {
+        city: undefined,
+        state: undefined
     };
 
     render() {
         return (
-            <div>
-                <Titles/>
-                <Forms getLocation={this.getLocation}/>
-                <Weather/>
+            <div
+                style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    height: "100vh"
+                }}
+            >
+                <Terminal
+                    hideTopBar={true}
+                    allowTabs={false}
+                    startState='maximised'
+                    color='green'
+                    backgroundColor='black'
+                    barColor='black'
+                    style={{ fontWeight: "bold", fontSize: "1em" }}
+                    commands={{
+                        'intro': () => 'echo Harshit Gupta\n B.tech CSE',
+                        'github':()=>window.open('https://www.github.com/harshitsaamu/'),
+                        'linkedin':()=>window.open('https://www.linkedin.com/in/harshithgc/'),
+                        'resume':()=>window.open('https://www.linkedin.com/in/harshithgc/')
+                    }}
+                    descriptions={{
+                        'intro': 'my introduction',
+                        'github':'my github account',
+                        'resume':'download my resume',
+                        'linkedin':'lets\'s talk professionally'
+                    }}
+                    msg='Hey human Harshit here, how can I help you'
+                />
             </div>
         );
     }
