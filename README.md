@@ -1,4 +1,3 @@
--A web application to fetch zipcode data
-<br/>
-use <code>npm start</code> to run application
+# this is my terminal based portfolio
+- type `help` to get started
 
