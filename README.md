@@ -1,3 +1,3 @@
-# Terminal based portfolio
+# :computer: Terminal based portfolio
 > type `help` to get started
 
